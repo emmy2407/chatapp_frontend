@@ -19,7 +19,7 @@ export default function Chat() {
     connectToWs();
   }, [selectedUserId]);
   function connectToWs() {
-    const ws = new WebSocket('https://api-chatapp-mauve.vercel.app');
+    const ws = new WebSocket('ws://api-chatapp-mauve.vercel.app');
     setWs(ws);
     ws.addEventListener('message', handleMessage);
     ws.addEventListener('close', () => {
